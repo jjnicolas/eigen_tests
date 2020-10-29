@@ -1,13 +1,15 @@
 cmake_minimum_required(VERSION 3.18)
 set(CMAKE_VERBOSE_MAKEFILE ON)
-set(CMAKE_BUILD_TYPE Release)
+# set(CMAKE_BUILD_TYPE Release)
 project(eigen_tests)
 set(CXX_STANDARD 17)
 # set(CMAKE_FIND_FRAMEWORK NEVER)
-
+IF(MSVC) 
+        SET(CMAKE_CXX_FLAGS "/EHsc")
+        endif()
 # find_package(Eigen3 CONFIG REQUIRED)
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
-conan_basic_setup()
+ conan_basic_setup()
 
 add_executable(test0 test0.cpp)
 add_executable(test1 test1.cpp)

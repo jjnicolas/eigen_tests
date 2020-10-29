@@ -1,0 +1,12 @@
+.vscode/
+**/build/
+**/__pycache__
+**/.DS_Store
+*.pyd
+*.dll
+*.lib
+*.so
+opalLib/swig/opalLib.py
+opalLib/swig/opalLib_wrap.c
+opalLib/ctypes/opalLib.dll
+opalLib/ctypes/opalLib.lib

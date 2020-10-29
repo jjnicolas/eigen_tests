@@ -1,0 +1,22 @@
+cmake_minimum_required(VERSION 3.18)
+set(CMAKE_VERBOSE_MAKEFILE ON)
+set(CMAKE_BUILD_TYPE Release)
+project(eigen_tests)
+set(CXX_STANDARD 17)
+# set(CMAKE_FIND_FRAMEWORK NEVER)
+
+# find_package(Eigen3 CONFIG REQUIRED)
+include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+conan_basic_setup()
+
+add_executable(test0 test0.cpp)
+add_executable(test1 test1.cpp)
+add_executable(test2 test2.cpp)
+add_executable(test3 test3.cpp)
+add_executable(test4 test3.cpp)
+target_link_libraries(test1 PRIVATE ${CONAN_LIBS})
+target_link_libraries(test2 PRIVATE ${CONAN_LIBS})
+target_link_libraries(test3 PRIVATE ${CONAN_LIBS})
+target_link_libraries(test4 PRIVATE ${CONAN_LIBS})
+install(TARGETS test0 test1 test2 test3 test4
+        DESTINATION "${PROJECT_SOURCE_DIR}")

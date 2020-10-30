@@ -10,3 +10,9 @@ opalLib/swig/opalLib.py
 opalLib/swig/opalLib_wrap.c
 opalLib/ctypes/opalLib.dll
 opalLib/ctypes/opalLib.lib
+test0
+test1
+test2
+test3
+test4
+swig/pyinverter/inverter_wrapper.py
